@@ -1,0 +1,61 @@
+routes
+/singup: POST
+	{email,password} -> user created successfully
+/login: POST
+	{email,password} -> {
+    "Response": "login successfully",
+    "token": token
+}
+api/products:
+GET /:
+none -> productsArray
+GET /:id:
+none -> product
+GET /:category:
+none -> productsArray
+admin status<
+POST /:
+{title,price,thumbnail,category(NR)} -> {success:"saved product",id}
+PUST /:id:
+{title(NR),price(NR),thumbnail(NR),category(NR)} ->{success: "updated product"}
+DELETE /:id:
+none -> {success: "removed product"}
+>
+
+
+api/carts:
+POST /:
+{productId} -> {success:"newCart created",id}
+GET /:id:
+none -> products array
+POST /:id:
+{productId} -> "product added successfully"
+DELETE /:id:
+{productId} -> "product deleted successfully"
+DELETE /:id/delete:
+none-> {success:"cart deleted successfully"}
+
+
+/api/chat:
+GET /:
+none -> {chat :menssage array}
+DELETE /:id:
+none -> {success: "menssage deleted"}
+POST /:
+{menssage} -> {success: "message added successfully"}
+
+api/users:
+admin status<
+GET /:
+none->users Array
+GET /:id:
+none->user
+POST /:
+(emai,password,name(NR),addres(NR),age(NR),phoneNunber(NR),avatar(NR),admin(NR)->{success:"user created successfully"}
+PUT /:id:
+(emai,password,name(NR),addres(NR),age(NR),phoneNunber(NR),avatar(NR),admin(NR)->{success : "updated user" }
+
+
+
+
+INCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERSINCORPORAR ADMIN EN LA RUTA API/USERS
