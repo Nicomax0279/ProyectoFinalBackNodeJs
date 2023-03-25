@@ -51,7 +51,6 @@ const infologger = (req,res,next)=>{
 
 
 app.use(infologger)
-app.use(express.static(__dirname+"/public"));
 app.use(express.json()); 
 app.use(express.urlencoded({extended:true})); 
 
