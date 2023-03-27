@@ -14,11 +14,6 @@ router.get("/",(req,res)=>{
     res.redirect("/profile")
 })
 
-router.get("/products",(req,res)=>{
-        logger.info(`ruta : ${req.path}, peticion : ${req.method}`)
-
-    res.render("products")
-})
 router.use("/api/carts",validateToken,cartsRouter)
 router.use('/api/products',validateToken,produstsRouter)
 router.use('/api/users',validateToken,userRouter)
